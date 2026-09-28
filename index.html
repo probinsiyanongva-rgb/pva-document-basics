@@ -1,0 +1,1022 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#1B4332"><title>PVA Academy — Document Basics</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>:root{--green:#1B4332;--green-dark:#0F2A1D;--green-soft:#E4EEE7;--cream:#F5EFDD;--cream-deep:#EDE4CB;--card:#FFFDF7;--yellow:#E8A93B;--yellow-deep:#C98A1E;--charcoal:#2B2B27;--muted:#6B6754;--line:#D8CEB0;--olive:#788B43;--radius:16px;--shadow:0 5px 0 rgba(27,67,50,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--charcoal);font-family:Inter,system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}button,a{font:inherit}a{color:var(--green)}:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}.skip-link{position:absolute;left:10px;top:-50px;background:var(--green);color:#fff;padding:10px 14px;border-radius:0 0 10px 10px;z-index:100}.skip-link:focus{top:0}
+.route-bar{position:sticky;top:0;z-index:50;background:var(--green-dark);color:#fff;padding:10px 18px;box-shadow:0 2px 0 rgba(15,42,29,.18)}.route-inner{width:100%;max-width:1180px;margin:auto;display:flex;align-items:center;gap:12px;min-width:0}.home-btn{color:#fff;text-decoration:none;font-size:.88rem;font-weight:700;background:rgba(255,255,255,.1);padding:6px 12px;border-radius:20px;white-space:nowrap}.route-title{font-weight:700;font-size:.94rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}.route-tag{font-size:.72rem;font-weight:700;background:rgba(232,169,59,.18);color:#F4CF83;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.progress-wrap{background:var(--cream);border-bottom:1px solid var(--line);padding:10px 18px 12px;position:sticky;top:45px;z-index:40}.progress-inner{max-width:920px;margin:auto}.progress-label{display:flex;justify-content:space-between;align-items:baseline;font-size:.78rem;color:var(--muted);font-weight:700;margin-bottom:7px}.progress-track{display:flex;gap:5px}.progress-seg{flex:1;height:7px;border:0;border-radius:6px;background:var(--line);padding:0;cursor:pointer;pointer-events:none}.progress-seg.done{background:var(--olive)}.progress-seg.current{background:var(--yellow)}
+main{max-width:920px;margin:auto;padding:30px 18px 90px}.course-header{position:relative;background:var(--green);color:#fff;border-radius:18px;padding:38px 38px 34px;margin-bottom:22px;box-shadow:var(--shadow);overflow:hidden}.course-header:after{content:"";position:absolute;width:180px;height:180px;border:2px solid rgba(255,255,255,.08);border-radius:50%;right:-65px;top:-65px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800;color:#CFE3D8;margin-bottom:10px}.course-header h1{font:700 clamp(2.2rem,5vw,3.5rem)/1.05 Fraunces,Georgia,serif;margin:0 0 12px}.course-header p{max-width:720px;margin:0;color:#EAF4EF;font-size:1.02rem}.meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.meta-chip{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);padding:5px 10px;border-radius:999px;font-size:.75rem;font-weight:700;color:#F7F3E8}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin:20px 0;box-shadow:var(--shadow)}h2,h3,h4{font-family:Fraunces,Georgia,serif;color:var(--green)}h2{font-size:1.8rem;line-height:1.2;margin:0 0 15px}h3{font-size:1.35rem;line-height:1.25;margin:28px 0 8px}h4{font-size:1.15rem;line-height:1.25;margin:22px 0 7px}.lead{font-size:1.05rem}.small{font-size:.88rem;color:var(--muted)}.section-label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:8px}.folder-tab{display:inline-block;background:var(--cream-deep);color:var(--green);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:6px 11px;border-radius:8px 8px 3px 3px;margin-bottom:13px}
+.callout{border-left:5px solid var(--yellow);background:#F4E8C8;padding:16px 19px;border-radius:0 12px 12px 0;margin:20px 0}.tip{background:var(--green-soft);border:1px solid #C9DED1;padding:16px 19px;border-radius:12px;margin:20px 0}.key-idea{background:var(--cream-deep);border:1px solid var(--line);padding:18px;border-radius:14px;margin:20px 0}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.btn{border:0;border-radius:10px;padding:11px 16px;background:var(--green);color:#fff;font-weight:800;cursor:pointer;box-shadow:0 2px 0 rgba(15,42,29,.2)}.btn.secondary{background:var(--card);color:var(--green);border:1px solid var(--green);box-shadow:none}.btn.gold{background:var(--yellow);color:var(--charcoal);box-shadow:0 2px 0 var(--yellow-deep)}
+.lesson{scroll-margin-top:105px}.lesson-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:18px}.lesson-num{flex:0 0 48px;height:48px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font:700 1.05rem Fraunces,Georgia,serif}.lesson-title-wrap{min-width:0;flex:1}.lesson-title-wrap h2{margin:0 0 3px}.lesson-status{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.done-stamp{display:none;align-items:center;background:var(--green-soft);color:var(--green);border:1px solid #BCD4C4;border-radius:999px;padding:5px 9px;font-size:.7rem;font-weight:800}.lesson.is-done .done-stamp{display:inline-flex}.lesson.is-done .lesson-num{background:var(--olive)}
+.activity-title,.answer-title,.takeaway-title,.connection-title{margin:24px 0 10px;padding:10px 13px;border-radius:10px;font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}.activity-title{background:#FBF7EA;border:1px dashed #C7BA91;color:var(--green)}.check-title{background:var(--green-soft);border:1px solid #C9DED1}.answer-title{background:var(--cream-deep);color:var(--green)}.takeaway-title{background:var(--green);color:#fff}.connection-title{border-left:4px solid var(--yellow);background:#F4E8C8;color:var(--green)}
+code{background:#F0EEE5;border:1px solid #D2CCB9;border-radius:6px;padding:2px 5px;font-family:ui-monospace,SFMono-Regular,monospace;font-size:.9em}pre{background:#2B2B27;color:#F7F3E8;border-radius:12px;padding:18px;overflow:auto;line-height:1.5}pre code{background:none;border:0;padding:0;color:inherit}table{width:100%;border-collapse:collapse;margin:18px 0}th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}th{background:var(--green);color:#fff}tr:nth-child(even) td{background:#FBF9F1}ul,ol{padding-left:1.35rem}.lesson-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);margin-top:26px;padding-top:18px}.next-hint{font-size:.8rem;color:var(--muted)}.lesson-nav{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin:18px 0 28px}.lesson-nav button{border:1px solid var(--line);background:var(--card);color:var(--green);border-radius:9px;padding:8px 5px;font-size:.72rem;font-weight:800;cursor:pointer}.lesson-nav button.done{background:var(--green-soft);border-color:#BCD4C4}.lesson-nav button.current{border-color:var(--yellow);box-shadow:0 0 0 2px rgba(232,169,59,.16)}
+.practice-download{display:flex;align-items:center;justify-content:space-between;gap:15px;background:var(--green-soft);border:1px solid #C9DED1;padding:15px 17px;border-radius:12px;margin:20px 0}.practice-download a{font-weight:800}.completion{background:var(--card);border:2px solid var(--yellow);border-radius:18px;padding:42px 30px;text-align:center;box-shadow:var(--shadow);scroll-margin-top:105px}.completion:before{content:"COMPLETION";display:inline-block;color:var(--green);background:var(--cream-deep);padding:5px 10px;border-radius:999px;font-size:.68rem;font-weight:800;letter-spacing:.1em;margin-bottom:12px}.completion-icon{font-size:3rem}.completion h2{font-size:2.3rem}.completion-card-note{max-width:620px;margin:20px auto;background:var(--cream-deep);border:1px solid var(--line);padding:16px;border-radius:12px;text-align:left}.hidden{display:none!important}.storage-banner{background:#F4E8C8;border:1px solid #D8B86A;border-left:5px solid var(--yellow-deep);padding:14px 16px;border-radius:0 12px 12px 0;margin:18px 0}.storage-banner strong{color:var(--green)}.progress-tools{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 22px}.progress-tools .btn{font-size:.78rem;padding:8px 11px}.save-state{font-size:.75rem;color:var(--muted);margin-left:auto;align-self:center}.answer-disclosure{margin:14px 0}.answer-disclosure summary{cursor:pointer;list-style:none;background:var(--cream-deep);color:var(--green);border:1px solid var(--line);padding:10px 13px;border-radius:10px;font-weight:800}.answer-disclosure summary::-webkit-details-marker{display:none}.answer-disclosure[open] summary{border-radius:10px 10px 0 0}.answer-disclosure .answer-body{border:1px solid var(--line);border-top:0;padding:13px 15px;border-radius:0 0 10px 10px;background:#FFFDF7}.selfcheck-item{border-top:1px solid var(--line);padding:18px 0}.selfcheck-item:first-of-type{border-top:0}.choice-group{display:grid;gap:7px;margin:10px 0}.choice{display:flex;gap:9px;align-items:flex-start;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:#FBF9F1;cursor:pointer}.choice:hover{background:var(--green-soft)}.choice input{margin-top:4px;accent-color:var(--green)}.review-pointer{display:none;background:var(--green-soft);border:1px solid #C9DED1;padding:10px 12px;border-radius:9px;margin-top:9px}.review-pointer.show{display:block}.review-pointer a{font-weight:800}.completion-meta{margin:16px auto;max-width:620px;background:#FBF9F1;border:1px solid var(--line);padding:12px 14px;border-radius:10px;text-align:left}.before-start{background:var(--green-soft);border:1px solid #C9DED1;padding:18px 20px;border-radius:14px;margin:0 0 20px}.before-start h2{margin-top:0;font-size:1.25rem}.out-of-scope{margin:18px 0}.out-of-scope summary{cursor:pointer;font-weight:800;color:var(--green);padding:8px 0}.backup-wrap{position:relative}.copy-btn{margin-top:8px}.backup-wrap pre{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}.lesson-footer .footer-actions{display:flex;flex-wrap:wrap;gap:8px}.btn.subtle{background:var(--card);color:var(--muted);border:1px solid var(--line);box-shadow:none}.btn.subtle:disabled{opacity:.55;cursor:default}.current-section{outline:2px solid rgba(232,169,59,.28);outline-offset:4px}footer{text-align:center;color:var(--muted);font-size:.82rem;padding:28px 0}.footer-mark{font-weight:800;color:var(--green)}
+@media(max-width:760px){.route-tag{display:none}.progress-wrap{top:45px;padding:9px 12px}.progress-label{font-size:.72rem}.progress-track{gap:3px}.progress-seg{height:10px}.course-header{padding:29px 23px}.card{padding:22px}.lesson-head{gap:12px}.lesson-num{flex-basis:42px;height:42px}.lesson-nav{grid-template-columns:repeat(4,1fr)}.lesson-footer{align-items:flex-start;flex-direction:column}.completion{padding:34px 20px}.progress-tools{display:grid;grid-template-columns:1fr 1fr}.save-state{width:100%;margin-left:0}.completion .hero-actions{justify-content:center}.practice-download{align-items:flex-start;flex-direction:column}}
+@media print{body *{visibility:hidden!important}#completion,#completion *{visibility:visible!important}#completion{display:block!important;position:absolute;left:0;top:0;width:100%;box-sizing:border-box;border:none!important;box-shadow:none!important;background:#fff!important}.route-bar,.progress-wrap{display:none!important}}
+</style></head><body>
+<a class="skip-link" href="#main-content">Skip to course content</a><header class="route-bar"><div class="route-inner"><a class="home-btn" href="https://probinsiyanongva.org/" target="_blank" rel="noopener" aria-label="Open PVA Academy home page">← PVA Academy</a><div class="route-title">Document Basics</div><div class="route-tag">FOUNDATION</div></div></header>
+<div class="progress-wrap"><div class="progress-inner"><div class="progress-label"><span id="progressText">Getting started</span><span id="progressPct">0%</span></div><div class="progress-track" id="progressTrack"></div></div></div>
+<main id="main-content"><section class="course-header" id="top"><div class="eyebrow">PVA Academy · Foundation Module · Version 1.0</div><h1>Document Basics</h1><p>A practical foundation for working with documents in VA tasks.</p><div class="meta-row"><span class="meta-chip">Free</span><span class="meta-chip">Self-Paced</span><span class="meta-chip">No Login</span><span class="meta-chip">Tool-Neutral</span></div></section>
+<div class="before-start" aria-labelledby="before-start-title"><h2 id="before-start-title">Before You Start</h2><p><strong>No login is required.</strong> You can start learning right away.</p><p>Your course progress is saved on the device and browser you are using right now. Nothing is sent to an account or a server.</p><p>For the best experience, keep using the <strong>same device and browser</strong> while you take this module.</p><p><strong>Important:</strong></p><ul><li>Your saved progress may not be available if you switch to another device or browser.</li><li>Clearing your browser's site data may remove your saved progress.</li><li>Private or incognito browsing may prevent your saved progress from being available later.</li></ul><p><strong>Laptop or desktop required:</strong> You’ll need a keyboard, pointing device, internet access sufficient to open the module and practice file, and a document editor such as Microsoft Word, Google Docs, LibreOffice Writer, or a comparable editor.</p></div>
+<div class="storage-banner hidden" id="storageBanner" role="status" aria-live="polite"><strong>Progress can't be saved in this browser.</strong><br><span id="storageBannerText">You can continue learning, but your progress may not remain after you close or refresh this page. If you are using private browsing or have blocked site data, try a normal browser window.</span></div>
+<section class="card" aria-labelledby="orientation-title"><h2 id="orientation-title">A practical document foundation</h2><p class="lead">This module helps you become comfortable enough with basic document work that you can focus on the actual task.</p><p>This is a foundation module, not a Microsoft Word or Google Docs course. The same basic concepts can be carried into comparable document editors.</p><p><strong>Learner outcome:</strong> “I know my way around a document well enough to work on the task.”</p><div class="callout"><strong>Standalone and optional.</strong><br>This module is not graded and is not a certification or competency credential. A specialized training course may recommend it as preparation.</div><h3>The workflow you’ll practise</h3><p><strong>Open → Save a Copy → Inspect → Edit → Organize → Format → Review → Save</strong></p><details class="out-of-scope"><summary>What this foundation does not cover</summary><ul><li>Mail merge</li><li>Macros</li><li>Advanced styles</li><li>Complex page layouts</li><li>Advanced tables</li><li>Document automation</li><li>Advanced collaboration workflows</li><li>Advanced templates</li><li>Advanced publishing</li><li>Advanced document design</li><li>Specialized legal/medical/NDIS requirements</li><li>Application certification</li><li>Advanced Word/Docs-specific techniques</li><li>Advanced automation</li><li>Advanced file management</li><li>Cloud storage administration</li><li>Sync management</li><li>Version control</li><li>Document management systems</li><li>Automated file processing</li></ul></details><div class="hero-actions"><button class="btn" id="startContinueBtn" onclick="startOrContinue()">Start the module</button><button class="btn secondary" onclick="goTo('practice')">Go to Practice Task</button></div></section>
+<div class="section-label">Course map</div><div class="folder-tab">What you will learn</div><div class="lesson-nav" id="lessonNav"></div><div class="progress-tools"><button class="btn subtle" type="button" onclick="exportProgress()">Export Progress</button><button class="btn subtle" type="button" onclick="document.getElementById('restoreFile').click()">Restore Progress</button><button class="btn subtle" type="button" onclick="clearProgress()">Clear Progress</button><span class="save-state" id="saveState">Progress is saved on this device.</span><input id="restoreFile" type="file" accept="application/json,.json" hidden onchange="restoreProgress(event)"></div>
+<section class="card lesson" id="lesson1"><div class="lesson-head"><div class="lesson-num">1</div><div class="lesson-title-wrap"><div class="section-label">Lesson 1</div><h2>Understanding Documents</h2><div class="lesson-status"><span class="done-stamp">✓ Completed</span></div></div></div><h3>What You’ll Learn</h3>
+<p>In this lesson, you’ll learn to recognize the basic parts of a document:</p>
+<ul>
+<li>Document vs. page</li>
+<li>Text</li>
+<li>Paragraphs</li>
+<li>Headings</li>
+<li>Cursor/insertion point</li>
+<li>Selecting text</li>
+<li>Basic document structure</li>
+<li>Opening a downloaded document</li>
+<li>Basic saving and creating a separate copy</li>
+</ul>
+<p>This lesson focuses on what each part of a document is and does, so the ideas carry over to whichever editor you use.</p>
+<h3>Why Start Here?</h3>
+<p>When we work with a document, we first need to understand what we are looking at. A client may send a document to clean up, update, organize, or review. Recognizing its structure helps us work carefully.</p>
+<h3>1. What Is a Document?</h3>
+<p>A document is a file containing information created, edited, organized, and presented in a document editor.</p>
+<p>Kinds of documents include:</p>
+<ul>
+<li>Notes</li>
+<li>Instructions</li>
+<li>Reports</li>
+<li>Meeting information</li>
+<li>Task lists</li>
+<li>Letters</li>
+<li>Simple work documents</li>
+</ul>
+<p>A document can also contain different kinds of content, such as text, lists, tables, and links.</p>
+<p>A document can be short or many pages long.</p>
+<h3>2. Document vs. Page</h3>
+<p>A document is the whole file. A page is one part of that document.</p>
+<p>A three-page document is still one document.</p>
+<p>Pages can shift as content is added or removed. Page breaks can therefore move while the document remains the same file.</p>
+<p>Some web editors also offer a pageless view. The basic idea remains: the document is the whole body of information you are working with.</p>
+<h3>3. Text</h3>
+<p>Text can include words, sentences, numbers, dates, labels, instructions, and notes.</p>
+<h3>4. Paragraphs</h3>
+<p>In a document editor, a paragraph is everything from one press of Enter or Return to the next. This can include a short line, a heading, a list item, or an empty paragraph.</p>
+<p>When text reaches the edge of the writing area and moves to the next line automatically, that is called line wrapping. You do not need to press Enter at the end of each visible line.</p>
+<p>Paragraphs matter because they can be moved, deleted, copied, formatted, or spaced as units.</p>
+<h3>5. Headings</h3>
+<p>A heading identifies a section.</p>
+<p>A heading is more than simply large or bold text. Its role is to identify the name or beginning of a section. Many editors provide built-in heading levels that can also help navigation tools recognize the document structure.</p>
+<h3>6. Pointer and Insertion Point</h3>
+<p>There are two things beginners often mix up:</p>
+<ul>
+<li><strong>Mouse pointer:</strong> the arrow or I-beam that moves when you move the mouse or touchpad.</li>
+<li><strong>Insertion point/cursor:</strong> the blinking position inside the document where typed text will appear.</li>
+</ul>
+<p>The mouse pointer can move around the screen. The insertion point moves when you click in the document or use supported keyboard navigation.</p>
+<p>Try this:</p>
+<ol>
+<li>Open a blank document.</li>
+<li>Type <strong>Hello!</strong></li>
+<li>Click in the middle of the word.</li>
+<li>Notice the blinking insertion point.</li>
+<li>Type one character and observe where it appears.</li>
+</ol>
+<h3>7. Selecting Text</h3>
+<p>Selected text is shown with a temporary shaded background. This is not the same as applying a highlight color.</p>
+<p>Selecting text identifies what you want to work with.</p>
+<p>You may select text to:</p>
+<ul>
+<li>Copy</li>
+<li>Cut</li>
+<li>Delete</li>
+<li>Replace</li>
+<li>Format</li>
+</ul>
+<p>To select text, click and hold at the beginning, drag across the text, and release. Double-clicking often selects a whole word. Other selection methods vary by application.</p>
+<p>Remember:</p>
+<p><strong>Select → Do something with the selection</strong></p>
+<h3>8. Simple Document Structure</h3>
+<p>A useful basic model is:</p>
+<p><strong>Document → Sections → Headings + their content</strong></p>
+<p>A section may contain paragraphs, lists, tables, links, or other content.</p>
+<h3>9. Opening a Downloaded Document</h3>
+<p>Practice files may arrive as downloaded files.</p>
+<p>In a desktop editor, you can usually open the file from your Downloads folder or from the location where you saved it.</p>
+<p>In a web editor, you may need to upload the downloaded file first or use the editor's Open/Upload option.</p>
+<p>Some editors first open downloaded files in a read-only, preview, or protected view. Look for an option such as <strong>Enable Editing</strong> or <strong>Open with…</strong> before you start. The exact wording and buttons vary by application. The important idea is:</p>
+<p><strong>Get the file into the editor before you begin editing it.</strong></p>
+<h3>10. Saving Your Work</h3>
+<p>Different editors handle saving in different ways.</p>
+<h4>Editors with manual saving</h4>
+<p>Desktop editors commonly provide <strong>Save</strong> and <strong>Save As</strong> or a similar option.</p>
+<ul>
+<li><strong>Save</strong> keeps changes in the current file.</li>
+<li><strong>Save As / Save a Copy</strong> creates a separate version so the original can remain unchanged.</li>
+</ul>
+<h4>Editors with automatic saving</h4>
+<p>Many web editors save changes automatically as you work.</p>
+<p>You may still need <strong>Make a copy</strong>, <strong>Save a copy</strong>, <strong>Download</strong>, or a similar option when you want a separate version.</p>
+<p>The exact wording varies by editor.</p>
+<p>For this module, the practical habit is:</p>
+<p><strong>Keep the original. Work on a separate copy. After making the copy, check the file name shown in the window or tab so you know you are editing the copy. Confirm where the finished copy is saved.</strong></p>
+<p>If a downloaded file is opened in a web editor, the editor may first ask you to upload or import it. That is a normal part of opening a local file in a web-based editor.</p>
+<h4 class="activity-title">Try It — Identify the Parts</h4>
+<p>Use a simple example such as:</p>
+<p><strong>Monday Task List</strong></p>
+<p>A short paragraph explains the week's priorities.</p>
+<p><strong>Follow-up Items</strong></p>
+<p>Several related items appear below.</p>
+<p>Identify:</p>
+<ul>
+<li>Main heading</li>
+<li>Paragraph</li>
+<li>Section heading</li>
+<li>List or list opportunity</li>
+<li>Individual text</li>
+</ul>
+<p>To change “Follow-up Items” to “Items for Follow-up,” select the heading text first.</p>
+<h4 class="activity-title">Small Practice</h4>
+<ol>
+<li>Create or open a blank document.</li>
+<li>Type <strong>My VA Task List</strong>, press Enter, then type a sentence.</li>
+<li>Add <strong>Next Steps</strong>, press Enter, then type three items on separate lines. You may use bullet points if you already know how; lists are taught later.</li>
+<li>Click different parts and notice the insertion point.</li>
+<li>Select a word or phrase and notice the selection.</li>
+</ol>
+<p>The purpose is to become familiar with the document, not to produce a finished design.</p>
+<h4 class="activity-title check-title">Self-Check</h4>
+<ol>
+<li>What is the difference between a document and a page?</li>
+<li>In a document editor, what is a paragraph?</li>
+<li>What is the purpose of a heading?</li>
+<li>What is the difference between the mouse pointer and the insertion point?</li>
+<li>Why might you select text?</li>
+<li>Can a document contain more information than is currently visible?</li>
+<li>Why might you create a separate copy before editing?</li>
+</ol>
+<details class="answer-disclosure"><summary>Show answers</summary><div class="answer-body"><ol>
+<li><strong>Answer:</strong> A document is the whole file; a page is part of that document.</li>
+<li><strong>Answer:</strong> A paragraph is everything from one Enter/Return to the next.</li>
+<li><strong>Answer:</strong> A heading identifies a section and helps show document structure.</li>
+<li><strong>Answer:</strong> The pointer moves around the screen; the insertion point shows where text will be entered or edited.</li>
+<li><strong>Answer:</strong> Selecting identifies the text you want to act on.</li>
+<li><strong>Answer:</strong> Yes. More content may exist above, below, or on other pages.</li>
+<li><strong>Answer:</strong> It keeps the original available while you work on a separate version.</li>
+</ol></div></details>
+<h4 class="takeaway-title">Takeaway</h4>
+<p>A document has structure:</p>
+<p><strong>Document → Sections → Headings + their content</strong></p>
+<p>And a useful editing pattern is:</p>
+<p><strong>Select → Do something</strong></p>
+<p>Next: <strong>Lesson 2 — Navigating a Document</strong></p>
+<hr />
+<div class="lesson-footer"><span class="next-hint">Next step</span><div class="footer-actions"><button class="btn" onclick="markLesson(0)">Mark Lesson 1 complete</button><button class="btn subtle not-done-btn" onclick="unmarkLesson(0)" disabled>Mark as not done</button></div></div></section><section class="card lesson" id="lesson2"><div class="lesson-head"><div class="lesson-num">2</div><div class="lesson-title-wrap"><div class="section-label">Lesson 2</div><h2>Navigating a Document</h2><div class="lesson-status"><span class="done-stamp">✓ Completed</span></div></div></div><h3>What You’ll Learn</h3>
+<p>You’ll learn how to move around a document and locate the information you need.</p>
+<p>You’ll practice:</p>
+<ul>
+<li>Moving through a document</li>
+<li>Recognizing where you are</li>
+<li>Finding specific words or phrases</li>
+<li>Moving to a section or location</li>
+<li>Using zoom</li>
+<li>Recognizing content outside the visible area</li>
+<li>Confirming that a search result is the correct occurrence</li>
+</ul>
+<h3>Why Navigation Matters</h3>
+<p>A client may ask you to update information in a long document or check a particular section. Navigation helps us know where we are, where we need to go, and how to get there.</p>
+<h3>1. Moving Through a Document</h3>
+<p>Use scrolling to view earlier or later content. You may use a mouse wheel, scroll bar, touchpad, keyboard keys, or other supported methods.</p>
+<p>Try scrolling through a document and back again. Notice that you are changing what is visible, not changing the document.</p>
+<h3>2. Knowing Where You Are</h3>
+<p>Look for clues:</p>
+<ul>
+<li>Heading currently visible</li>
+<li>Paragraph around the insertion point</li>
+<li>Page currently displayed</li>
+<li>Scroll-bar position</li>
+<li>Section visible on screen</li>
+</ul>
+<p>Before editing, ask:</p>
+<p><strong>“What part of the document am I looking at?”</strong></p>
+<h3>3. Finding Specific Information</h3>
+<p>Most document editors provide <strong>Find</strong> or <strong>Search</strong>.</p>
+<p>You can usually open it through the editor's Find/Search command. A common shortcut is <strong>Ctrl+F on Windows or Linux, or Cmd+F on Mac</strong>.</p>
+<p>For example, search for <strong>Greenfield Supplies</strong> in a longer document.</p>
+<p>If there are multiple matches, move between them and confirm which one is relevant.</p>
+<p><strong>Find locates information. It does not automatically change it.</strong></p>
+<h4 class="activity-title">Try It</h4>
+<p>Use a longer document or repeat a sample several times so that scrolling and multiple search matches are possible.</p>
+<ol>
+<li>Choose a word that appears more than once.</li>
+<li>Open Find/Search.</li>
+<li>Enter the word.</li>
+<li>Inspect the first result.</li>
+<li>Move to another result.</li>
+<li>Read the surrounding content.</li>
+<li>Confirm which occurrence you actually need.</li>
+</ol>
+<h3>4. Finding Is Not the Same as Editing</h3>
+<p>Finding locates information.</p>
+<p>Selecting prepares text for an action.</p>
+<p>Editing changes the text.</p>
+<p>Useful pattern:</p>
+<p><strong>Find → Locate → Select → Edit</strong></p>
+<h3>5. Moving to a Section</h3>
+<p>Some applications provide a navigation pane, outline, headings list, table of contents, or a Navigator.</p>
+<p>These can help you move between sections when the document uses appropriate heading structure.</p>
+<p>A heading that is merely made larger or bolder may not always work with navigation tools.</p>
+<p>You’ll see how to apply a real built-in heading in Lesson 4.</p>
+<h3>6. Moving With the Insertion Point</h3>
+<p>Clicking in text places the insertion point at that location.</p>
+<p>Try clicking near the beginning, middle, and end of a paragraph and observe the insertion point.</p>
+<h3>7. Zooming In and Out</h3>
+<p>Zoom changes how large the document appears on your screen. It does not normally change the actual font size.</p>
+<p>Zoom in to read more comfortably; zoom out to see more of the document.</p>
+<h3>8. Content Can Be Outside the Visible Area</h3>
+<p>A document may contain more paragraphs, pages, tables, links, or notes above or below the current view.</p>
+<p>Ask:</p>
+<p><strong>“Is there more information above or below this area?”</strong></p>
+<h4 class="activity-title">Try It — Document Navigation Practice</h4>
+<p>Create or use a document containing at least several sections:</p>
+<p><strong>Weekly VA Task Report</strong></p>
+<p><strong>Completed Tasks</strong></p>
+<p>Updated product information<br />
+Reviewed customer messages<br />
+Checked inventory notes</p>
+<p><strong>Pending Tasks</strong></p>
+<p>Review supplier information<br />
+Prepare next week's report<br />
+Follow up on open requests</p>
+<p><strong>Notes</strong></p>
+<p>The supplier requested an updated contact list.</p>
+<p>Repeat the sample sections if needed so the document extends beyond one screen.</p>
+<p>Practice:</p>
+<ul>
+<li>Scrolling</li>
+<li>Clicking in Notes</li>
+<li>Finding “supplier”</li>
+<li>Moving between matches</li>
+<li>Confirming the correct occurrence</li>
+<li>Changing zoom</li>
+</ul>
+<h4 class="connection-title">Practical VA Connection</h4>
+<p>Navigation can be used to find names, sections, instructions, requested changes, repeated information, or information needed before editing.</p>
+<h4 class="activity-title check-title">Self-Check</h4>
+<ol>
+<li>What is the main purpose of scrolling?</li>
+<li>What does Find/Search help you do?</li>
+<li>What is the difference between finding text and selecting text?</li>
+<li>Why check surrounding content after finding a word?</li>
+<li>What does zoom normally change?</li>
+<li>If you can only see one section on screen, what should you remember?</li>
+</ol>
+<details class="answer-disclosure"><summary>Show answers</summary><div class="answer-body"><ol>
+<li><strong>Answer:</strong> Scrolling moves the visible area of the document.</li>
+<li><strong>Answer:</strong> It locates specific text.</li>
+<li><strong>Answer:</strong> Finding locates text; selecting identifies text to act on.</li>
+<li><strong>Answer:</strong> A matching word may appear in more than one place.</li>
+<li><strong>Answer:</strong> How large the document appears on screen.</li>
+<li><strong>Answer:</strong> More information may exist above, below, or on other pages.</li>
+</ol></div></details>
+<h4 class="takeaway-title">Takeaway</h4>
+<p><strong>Know Where You Are → Find What You Need → Move to It → Confirm What You're Looking At</strong></p>
+<p>Next: <strong>Lesson 3 — Entering and Editing Text</strong></p>
+<hr />
+<div class="lesson-footer"><span class="next-hint">Next step</span><div class="footer-actions"><button class="btn" onclick="markLesson(1)">Mark Lesson 2 complete</button><button class="btn subtle not-done-btn" onclick="unmarkLesson(1)" disabled>Mark as not done</button></div></div></section><section class="card lesson" id="lesson3"><div class="lesson-head"><div class="lesson-num">3</div><div class="lesson-title-wrap"><div class="section-label">Lesson 3</div><h2>Entering and Editing Text</h2><div class="lesson-status"><span class="done-stamp">✓ Completed</span></div></div></div><h3>What You’ll Learn</h3>
+<p>You’ll learn to enter and change text.</p>
+<p>You’ll practice:</p>
+<ul>
+<li>Entering new text</li>
+<li>Editing existing text</li>
+<li>Selecting text</li>
+<li>Positioning the insertion point</li>
+<li>Deleting</li>
+<li>Replacing</li>
+<li>Copying and pasting</li>
+<li>Cutting and pasting</li>
+<li>Undo and redo</li>
+<li>Checking results</li>
+<li>Saving changes and creating a separate copy</li>
+</ul>
+<h3>Why Editing Matters</h3>
+<p>Clients may ask you to update dates, names, contact details, remove old information, or move information between sections.</p>
+<p>Useful pattern:</p>
+<p><strong>Locate → Select or Position the Cursor → Edit → Check</strong></p>
+<h3>1. Entering Text</h3>
+<p>Click where you want text, place the insertion point, and type.</p>
+<p>If text is selected when you start typing, the selected text is normally replaced. If that happens accidentally, Undo can usually restore it.</p>
+<h4>Try It</h4>
+<p>Type:</p>
+<p><strong>Today's Tasks</strong></p>
+<p>Press Enter.</p>
+<p>Type:</p>
+<p><strong>Review customer messages.</strong></p>
+<p>Then click inside the sentence and add a short word.</p>
+<h3>2. Editing Existing Text</h3>
+<p>Editing changes text already in the document, such as correcting a spelling mistake or updating a date.</p>
+<h3>3. Selecting Text Before Editing</h3>
+<p>Selecting identifies the text you want to work with.</p>
+<p>Example:</p>
+<p>Please review the <strong>inventory report</strong> before Friday.</p>
+<p>You can then copy, cut, delete, replace, or format the selection.</p>
+<h3>4. Adding Text Without Selecting</h3>
+<p>Sometimes you simply position the insertion point and type.</p>
+<p>Example:</p>
+<p>Please review the report before Friday.</p>
+<p>Place the insertion point before “report” and add “final” to produce:</p>
+<p>Please review the final report before Friday.</p>
+<h3>5. Deleting Text</h3>
+<p>You can delete characters using Backspace or Delete, or select text and delete the selection.</p>
+<p>A common keyboard distinction is:</p>
+<ul>
+<li><strong>Backspace</strong> usually removes the character to the left of the insertion point.</li>
+<li><strong>Delete</strong> usually removes the character to the right.</li>
+</ul>
+<p>On some keyboards, especially Mac keyboards, the key labeled Delete behaves like Backspace.</p>
+<p>After deletion, check the surrounding sentence.</p>
+<h3>6. Replacing Text</h3>
+<p>Select old text and type the replacement.</p>
+<p>Example:</p>
+<p>Meeting Date: <strong>June 18</strong></p>
+<p>Change to:</p>
+<p>Meeting Date: <strong>June 20</strong></p>
+<p>If typing replaces something you did not intend to replace, use Undo and check the selection before trying again.</p>
+<h3>7. Copy and Paste</h3>
+<p>Copy stores a copy of your selected content. Nothing changes in the document until you paste.</p>
+<p>Basic pattern:</p>
+<p><strong>Select → Copy → Move the Cursor → Paste</strong></p>
+<p>A common shortcut is <strong>Ctrl+C / Ctrl+V on Windows or Linux, or Cmd+C / Cmd+V on Mac</strong>. You can also use the editor's menu or context menu.</p>
+<h3>8. Cut and Paste</h3>
+<p>Cut removes selected content from its current location and keeps it available to paste elsewhere.</p>
+<p>Basic pattern:</p>
+<p><strong>Select → Cut → Move the Cursor → Paste</strong></p>
+<p>A common shortcut is <strong>Ctrl+X / Ctrl+V on Windows or Linux, or Cmd+X / Cmd+V on Mac</strong>.</p>
+<p>If you cut something and then <strong>cut or copy something else</strong> before pasting, the first item may no longer be the current item available for pasting. Undo can help recover the original if needed.</p>
+<h3>9. Pasting Carefully</h3>
+<p>Pasted text may bring formatting from its source. Notice whether it fits with surrounding content.</p>
+<p>Advanced paste settings are out of scope.</p>
+<h3>10. Undoing a Change</h3>
+<p>Undo reverses a recent action.</p>
+<p>A common shortcut is <strong>Ctrl+Z on Windows or Linux, or Cmd+Z on Mac</strong>. You can also use the editor's Undo command or Undo arrow.</p>
+<h3>11. Redoing a Change</h3>
+<p>Redo reapplies an action that was undone.</p>
+<p>A common shortcut is <strong>Ctrl+Y on Windows or Linux, or Cmd+Shift+Z in many editors</strong>. Some Mac editors also use <strong>Cmd+Y</strong>.</p>
+<p>Redo is generally available only while the editor still has an action that can be reapplied. A new change may remove that redo opportunity.</p>
+<h3>12. Check After You Edit</h3>
+<p>After changing text, confirm:</p>
+<ul>
+<li>Correct information</li>
+<li>Correct location</li>
+<li>No accidental deletion</li>
+<li>Sentence still makes sense</li>
+<li>No missing information</li>
+</ul>
+<p>Pattern:</p>
+<p><strong>Edit → Read the Result → Confirm</strong></p>
+<h3>13. Saving Changes — Reminder</h3>
+<p>Save keeps changes in the current file. When you need to preserve the original, create and work in a separate copy as taught in Lesson 1.</p>
+<p>Before finishing, confirm that the latest changes are saved and that you are working in the intended copy.</p>
+<h4 class="activity-title">Try It — Basic Editing Practice</h4>
+<p>Create:</p>
+<p><strong>Weekly Task Update</strong></p>
+<p>The customer report is due on Friday.</p>
+<p>Please contact Ana before the meeting.</p>
+<p>The old contact number is [phone number].</p>
+<p>Change:</p>
+<ol>
+<li>Friday → Monday</li>
+<li>Ana → Maria</li>
+<li>Replace the placeholder contact number with a different clearly fictional placeholder</li>
+<li>Read and check all sentences</li>
+</ol>
+<h4 class="activity-title">Try It — Copy and Move Information</h4>
+<p>Create:</p>
+<p><strong>Task List</strong></p>
+<p><strong>Morning</strong></p>
+<p>Check customer messages.</p>
+<p><strong>Afternoon</strong></p>
+<p>Prepare the weekly report.</p>
+<p>Copy the customer-message sentence under Afternoon.</p>
+<p>Then cut the report sentence and paste it under Morning. If moving a whole numbered line, remove any empty line or leftover number left behind. Press Enter to create a new line before pasting if needed.</p>
+<p>Review the result.</p>
+<h4 class="activity-title">Try It — Undo and Recover</h4>
+<p>Make a small change, undo it, inspect the result, and if appropriate redo it.</p>
+<h4 class="connection-title">Practical VA Connection</h4>
+<p>Editing appears in client documents, reports, instructions, meeting notes, dates, names, contact details, and other simple document tasks.</p>
+<h4 class="activity-title check-title">Self-Check</h4>
+<ol>
+<li>What does the insertion point indicate?</li>
+<li>When is selecting text useful?</li>
+<li>What is the main difference between Copy and Cut?</li>
+<li>What function would you normally try after accidentally deleting important text?</li>
+<li>What does Paste do?</li>
+<li>What usually happens if you type while text is selected?</li>
+<li>Why check after editing?</li>
+<li>Complete: Locate → ______ → Edit → Check</li>
+</ol>
+<details class="answer-disclosure"><summary>Show answers</summary><div class="answer-body"><ol>
+<li><strong>Answer:</strong> Where you are working or where text may be entered.</li>
+<li><strong>Answer:</strong> When you want to work with a specific piece of text.</li>
+<li><strong>Answer:</strong> Copy leaves the original; Cut removes it from the original location.</li>
+<li><strong>Answer:</strong> Undo.</li>
+<li><strong>Answer:</strong> It places copied or cut content at the insertion point, or replaces selected text if text is selected at the destination.</li>
+<li><strong>Answer:</strong> The selected text is normally replaced.</li>
+<li><strong>Answer:</strong> To confirm the correct information was changed and nothing else was accidentally affected.</li>
+<li><strong>Answer:</strong> Select or Position the Cursor.</li>
+</ol></div></details>
+<h4 class="takeaway-title">Takeaway</h4>
+<p><strong>Insertion point (cursor) = Where you are working</strong></p>
+<p><strong>Select → Do Something</strong></p>
+<p><strong>Copy = Store a duplicate for pasting</strong></p>
+<p><strong>Cut = Move</strong></p>
+<p><strong>Undo = Reverse</strong></p>
+<p><strong>Redo = Apply Again</strong></p>
+<p><strong>Locate → Select or Position the Cursor → Edit → Check</strong></p>
+<p>Next: <strong>Lesson 4 — Basic Formatting</strong></p>
+<hr />
+<div class="lesson-footer"><span class="next-hint">Next step</span><div class="footer-actions"><button class="btn" onclick="markLesson(2)">Mark Lesson 3 complete</button><button class="btn subtle not-done-btn" onclick="unmarkLesson(2)" disabled>Mark as not done</button></div></div></section><section class="card lesson" id="lesson4"><div class="lesson-head"><div class="lesson-num">4</div><div class="lesson-title-wrap"><div class="section-label">Lesson 4</div><h2>Basic Formatting</h2><div class="lesson-status"><span class="done-stamp">✓ Completed</span></div></div></div><h3>What You’ll Learn</h3>
+<p>You’ll learn how basic formatting can make a document easier to read and understand.</p>
+<p>You’ll practice:</p>
+<ul>
+<li>Font</li>
+<li>Font size</li>
+<li>Bold, italic, underline</li>
+<li>Alignment</li>
+<li>Line spacing</li>
+<li>Paragraph spacing</li>
+<li>Headings</li>
+<li>Basic emphasis</li>
+<li>Consistency</li>
+<li>Avoiding unnecessary formatting</li>
+</ul>
+<h3>Why Formatting Matters</h3>
+<p>Formatting helps the reader understand information.</p>
+<h3>1. Formatting Changes How Information Appears</h3>
+<p>Formatting changes presentation without necessarily changing the words.</p>
+<h3>2. Font and Font Size</h3>
+<p>A font is the visual design/typeface used for text.</p>
+<p>Font size controls how large or small text appears.</p>
+<p>Choose readable fonts and maintain consistency.</p>
+<h3>3. Bold, Italic, and Underline</h3>
+<p>Use emphasis with purpose.</p>
+<p>Bold is often clear for short emphasis.</p>
+<p>Italic can provide lighter emphasis.</p>
+<p>Underline can be useful, but underlined text may be mistaken for a link. For ordinary emphasis, bold is often clearer.</p>
+<p>If everything is emphasized, nothing stands out.</p>
+<h3>4. Text Alignment</h3>
+<p>Common alignment options include left, center, right, and justified.</p>
+<p>Left alignment is commonly used for body text because it is easy to scan.</p>
+<p>Justified text can create uneven spaces between words, especially in narrower lines.</p>
+<p>Choose alignment based on the role of the content rather than decoration.</p>
+<h3>5. Line Spacing</h3>
+<p>Line spacing controls vertical space between lines within a paragraph.</p>
+<h3>6. Paragraph Spacing</h3>
+<p>Paragraph spacing controls space before or after paragraphs.</p>
+<p>This is different from line spacing.</p>
+<p>Pressing Enter repeatedly just to create large spaces is usually not the best way to control spacing.</p>
+<h3>7. Headings</h3>
+<p>Headings identify sections.</p>
+<p>Most editors have a text-style list with options such as Normal text, Title, Heading 1, and Heading 2, although the names can vary.</p>
+<p>Choosing a heading level from the editor's built-in heading feature marks the text as a heading, not simply as larger or bolder text.</p>
+<p>Use heading levels in a logical order. For this foundation, the goal is simply to apply a recognizable built-in heading to section titles.</p>
+<h3>8. How Formatting Is Applied</h3>
+<p>Some formatting applies to selected text.</p>
+<p>For example:</p>
+<ul>
+<li>Font</li>
+<li>Font size</li>
+<li>Bold</li>
+<li>Italic</li>
+<li>Underline</li>
+</ul>
+<p>Other formatting applies to the whole paragraph containing the insertion point or to selected paragraphs.</p>
+<p>For example:</p>
+<ul>
+<li>Alignment</li>
+<li>Line spacing</li>
+<li>Paragraph spacing</li>
+<li>Heading level</li>
+</ul>
+<p>To apply a heading level, place the insertion point in the heading line and choose the appropriate built-in heading from the editor's style list. To confirm that a heading is applied, click in the line and check that the style list shows the heading name. If sizes still differ afterward, use the font-size control to make them consistent.</p>
+<p>The exact controls vary by editor.</p>
+<h3>9. Basic Emphasis vs. Decoration</h3>
+<p>Helpful formatting:</p>
+<ul>
+<li>Clear headings</li>
+<li>Readable font size</li>
+<li>Consistent text</li>
+<li>Appropriate emphasis</li>
+<li>Reasonable spacing</li>
+<li>Logical alignment</li>
+</ul>
+<p>Potentially distracting:</p>
+<ul>
+<li>Too many fonts</li>
+<li>Excessive bold</li>
+<li>Too many colors</li>
+<li>Very large text without purpose</li>
+<li>Inconsistent sizes</li>
+<li>Decorative effects that reduce readability</li>
+</ul>
+<h3>10. Consistency Matters</h3>
+<p>Similar elements should generally follow the same formatting pattern.</p>
+<h3>11. Formatting Should Follow Structure</h3>
+<p>Understand the role of the information first, then use formatting to make those roles easier to see.</p>
+<p><strong>Format for the reader, not for decoration.</strong></p>
+<h4 class="activity-title">Try It — Format a Simple Document</h4>
+<p>Create:</p>
+<p><strong>Weekly VA Task Report</strong></p>
+<p>This week, the product information was reviewed and the customer messages were checked.</p>
+<p><strong>Completed Tasks</strong></p>
+<p>Reviewed product information.</p>
+<p>Answered customer messages.</p>
+<p><strong>Pending Tasks</strong></p>
+<p>Check supplier information.</p>
+<p>Prepare next week's report.</p>
+<p>Apply:</p>
+<ul>
+<li>A clear title</li>
+<li>Recognizable built-in headings</li>
+<li>Readable body text</li>
+<li>Reasonable spacing</li>
+<li>Limited emphasis</li>
+<li>Consistent formatting</li>
+</ul>
+<h4 class="activity-title">Try It — Formatting Cleanup</h4>
+<p>Use:</p>
+<p><strong>WEEKLY TASK REPORT</strong></p>
+<p><strong>COMPLETED TASKS</strong></p>
+<p>THE PRODUCT INFORMATION WAS REVIEWED.</p>
+<p><strong>PENDING TASKS</strong></p>
+<p>PLEASE CHECK THE SUPPLIER INFORMATION.</p>
+<p>Improve readability while keeping the wording the same.</p>
+<p>You may retype text using normal capitalization. The goal is readable presentation, not learning a change-case feature.</p>
+<h4 class="connection-title">Practical VA Connection</h4>
+<p>Basic formatting appears in reports, meeting notes, internal instructions, document cleanup, and other work documents.</p>
+<h4 class="activity-title check-title">Self-Check</h4>
+<ol>
+<li>What is one main purpose of document formatting?</li>
+<li>What is the difference between font and font size?</li>
+<li>Why can excessive emphasis reduce readability?</li>
+<li>What is the difference between line spacing and paragraph spacing?</li>
+<li>Why are built-in headings useful?</li>
+<li>Describe one formatting approach that supports a readable work document.</li>
+<li>Before applying formatting, what should you understand first?</li>
+</ol>
+<details class="answer-disclosure"><summary>Show answers</summary><div class="answer-body"><ol>
+<li><strong>Answer:</strong> To help information become clearer and easier to read.</li>
+<li><strong>Answer:</strong> Font is the visual design/typeface; font size controls how large it appears.</li>
+<li><strong>Answer:</strong> It makes everything look equally important.</li>
+<li><strong>Answer:</strong> Line spacing is between lines within a paragraph; paragraph spacing is between paragraphs.</li>
+<li><strong>Answer:</strong> They identify sections and can help document structure and navigation.</li>
+<li><strong>Answer:</strong> Any consistent, readable formatting that supports the document's structure is appropriate.</li>
+<li><strong>Answer:</strong> The structure and purpose of the information.</li>
+</ol></div></details>
+<h4 class="takeaway-title">Takeaway</h4>
+<p><strong>Font = How text looks</strong></p>
+<p><strong>Font Size = How large it appears</strong></p>
+<p><strong>Alignment = Where text sits horizontally</strong></p>
+<p><strong>Line Spacing = Space between lines</strong></p>
+<p><strong>Paragraph Spacing = Space between paragraphs</strong></p>
+<p><strong>Heading = Identifies a section</strong></p>
+<p>Principle:</p>
+<p><strong>Format for the reader, not for decoration.</strong></p>
+<p>Next: <strong>Lesson 5 — Working With Structured Content</strong></p>
+<hr />
+<div class="lesson-footer"><span class="next-hint">Next step</span><div class="footer-actions"><button class="btn" onclick="markLesson(3)">Mark Lesson 4 complete</button><button class="btn subtle not-done-btn" onclick="unmarkLesson(3)" disabled>Mark as not done</button></div></div></section><section class="card lesson" id="lesson5"><div class="lesson-head"><div class="lesson-num">5</div><div class="lesson-title-wrap"><div class="section-label">Lesson 5</div><h2>Working With Structured Content</h2><div class="lesson-status"><span class="done-stamp">✓ Completed</span></div></div></div><h3>What You’ll Learn</h3>
+<p>You’ll learn to organize information using common document features:</p>
+<ul>
+<li>Bulleted lists</li>
+<li>Numbered lists</li>
+<li>Choosing when a list is useful</li>
+<li>Simple tables</li>
+<li>Rows, columns, and cells</li>
+<li>Links</li>
+<li>Basic comments/suggestions awareness</li>
+<li>Basic organization</li>
+<li>Consistency</li>
+</ul>
+<h3>Why Structured Content Matters</h3>
+<p>A block of information can be difficult to scan. A suitable list, table, or other structure can make the same information easier to use.</p>
+<h3>1. Bulleted Lists</h3>
+<p>Bullets work well for related items where order is not important.</p>
+<p>When you insert a bulleted list, the editor normally creates and manages the bullet marks for you.</p>
+<p>Press Enter to move to the next item. Pressing Enter again on an empty list item normally ends the list.</p>
+<h3>2. Numbered Lists</h3>
+<p>Numbers work well when order or sequence matters.</p>
+<p>To turn existing lines into a list, put each item on its own line (press Enter between items), select those lines, and choose the bulleted or numbered list option. If the lines already have typed numbers, remove those typed numbers so the editor's numbers do not double up.</p>
+<p>Ask:</p>
+<p><strong>Does the order matter?</strong></p>
+<p>Let the editor create the numbers rather than typing the numbers yourself. Numbered lists can automatically renumber when items are added, removed, or moved.</p>
+<h3>3. Editing a List</h3>
+<p>Lists can be added to, deleted from, changed, moved, copied, or converted between list types.</p>
+<h3>4. Simple Tables</h3>
+<p>Tables organize information into rows and columns.</p>
+<p>Example:</p>
+<table>
+<thead>
+<tr>
+  <th>Task</th>
+  <th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Product review</td>
+  <td>Complete</td>
+</tr>
+<tr>
+  <td>Inventory check</td>
+  <td>Pending</td>
+</tr>
+<tr>
+  <td>Supplier follow-up</td>
+  <td>Pending</td>
+</tr>
+</tbody>
+</table>
+<p>Tables help when information has categories or fields that can be compared.</p>
+<h3>5. Working With Simple Tables</h3>
+<p>For this foundation, focus on:</p>
+<ul>
+<li>Creating a simple table</li>
+<li>Entering information</li>
+<li>Moving between cells</li>
+<li>Editing information</li>
+<li>Adding or removing basic information</li>
+<li>Recognizing a label/header row</li>
+</ul>
+<p>Most editors provide an <strong>Insert → Table</strong> command or a similar table option.</p>
+<p>A table is usually easier to work with when the first row identifies what each column contains.</p>
+<p>The Tab key often moves to the next cell, and in many editors pressing Tab in the last cell creates a new row. Mouse or touchpad clicking between cells is also fine.</p>
+<p>Advanced table design is out of scope.</p>
+<h3>6. Rows, Columns, and Cells</h3>
+<ul>
+<li><strong>Row</strong> = horizontal</li>
+<li><strong>Column</strong> = vertical</li>
+<li><strong>Cell</strong> = one box where a row and column meet</li>
+</ul>
+<h3>7. Links</h3>
+<p>A link allows a reader to open another location such as a webpage, online resource, form, or other linked material.</p>
+<p>The <strong>link text</strong> a reader sees can be different from the <strong>link address</strong> it opens.</p>
+<p>For example, the text might say:</p>
+<p><strong>Open the PVA Academy page</strong></p>
+<p>while the underlying address points to a specific webpage.</p>
+<h3>8. Check Links Before Sharing</h3>
+<p>When a task requires link checking:</p>
+<ol>
+<li>Confirm the link is present.</li>
+<li>Check that the visible link text makes sense.</li>
+<li>Check the link address when the editor provides a way to view it.</li>
+<li>Open the link when appropriate and confirm that it reaches the intended destination.</li>
+</ol>
+<p>Links often appear underlined or in a different color, but not always. Depending on the editor, hovering over the link, clicking it, or using a link-information/edit option may reveal the address. Some desktop editors require Ctrl+Click to open a link.</p>
+<p>For this foundation, the important skill is checking the destination, not advanced link management.</p>
+<h3>9. Comments and Suggestions</h3>
+<p>Some applications allow comments and suggested changes.</p>
+<p>You may see terms such as:</p>
+<ul>
+<li><strong>Comments</strong> — feedback, questions, or notes</li>
+<li><strong>Suggestions / Track Changes</strong> — proposed edits that may not yet be final</li>
+</ul>
+<p>The terminology varies by editor.</p>
+<p>In this module, we focus on recognizing these features and understanding that a suggested change may still need to be accepted before it becomes final text.</p>
+<p>Advanced collaboration workflows are out of scope.</p>
+<h3>10. Choosing the Right Structure</h3>
+<p>Paragraphs, bullets, numbers, and tables each fit different information patterns.</p>
+<p>Ask:
+<strong>Which structure will help the reader use this information?</strong></p>
+<h3>11. Keep Structured Content Consistent</h3>
+<p>Similar items should generally follow similar patterns.</p>
+<h4 class="activity-title">Try It — Organize Unstructured Information</h4>
+<p>Turn this:</p>
+<p>“For tomorrow's work, check customer messages, review the inventory report, contact the supplier, prepare the weekly report, and send the completed file to Maria.”</p>
+<p>into an appropriate structure.</p>
+<p>A numbered list is appropriate if the sequence matters. A bulleted list may be appropriate if the order does not matter.</p>
+<h4 class="activity-title">Try It — Choose a Structure</h4>
+<p>Decide whether a paragraph, bulleted list, numbered list, or simple table fits:</p>
+<p><strong>A. Documents required</strong></p>
+<p><strong>B. Steps for a document review</strong></p>
+<p><strong>C. Products with quantities and status</strong></p>
+<details class="answer-disclosure"><summary>Show example answer guidance</summary><div class="answer-body"><ul>
+<li><strong>A → Bulleted list</strong> because the items are related and order does not matter.</li>
+<li><strong>B → Numbered list</strong> because the steps follow a sequence.</li>
+<li><strong>C → Simple table</strong> because each item has multiple related fields such as product, quantity, and status.</li>
+</ul><p>These are examples of appropriate structures; the key is the reasoning behind the choice.</p></div></details>
+<h4 class="connection-title">Practical VA Connection</h4>
+<p>Structured content appears in task lists, meeting notes, simple reference tables, links, comments, suggestions, and organized instructions.</p>
+<h4 class="activity-title check-title">Self-Check</h4>
+<ol>
+<li>When is a bulleted list useful?</li>
+<li>When is a numbered list useful?</li>
+<li>What are the three basic parts of a table?</li>
+<li>Why might a table be more useful than a list?</li>
+<li>What is the difference between link text and a link address?</li>
+<li>What is a comment generally used for?</li>
+<li>What should guide your choice between a paragraph, list, or table?</li>
+</ol>
+<details class="answer-disclosure"><summary>Show answers</summary><div class="answer-body"><ol>
+<li><strong>Answer:</strong> Related items where order is not important.</li>
+<li><strong>Answer:</strong> When order or sequence matters.</li>
+<li><strong>Answer:</strong> Rows, columns, and cells.</li>
+<li><strong>Answer:</strong> It can organize related information into rows and columns for comparison.</li>
+<li><strong>Answer:</strong> Link text is what the reader sees; the link address is the destination the link opens.</li>
+<li><strong>Answer:</strong> Feedback, a question, or a note about document content.</li>
+<li><strong>Answer:</strong> Choose the structure that makes the information clearer, easier to scan, understand, or use.</li>
+</ol></div></details>
+<h4 class="takeaway-title">Takeaway</h4>
+<p><strong>Bullets = Related items</strong></p>
+<p><strong>Numbers = Sequence</strong></p>
+<p><strong>Tables = Related information in rows and columns</strong></p>
+<p><strong>Links = Connections to another location</strong></p>
+<p><strong>Comments = Feedback or notes</strong></p>
+<p>Principle:</p>
+<p><strong>Which structure will help the reader use this information?</strong></p>
+<p>Next: <strong>Practice Task</strong></p>
+<hr />
+<div class="lesson-footer"><span class="next-hint">Next step</span><div class="footer-actions"><button class="btn" onclick="markLesson(4)">Mark Lesson 5 complete</button><button class="btn subtle not-done-btn" onclick="unmarkLesson(4)" disabled>Mark as not done</button></div></div></section><section class="card lesson" id="practice"><div class="lesson-head"><div class="lesson-num">6</div><div class="lesson-title-wrap"><div class="section-label">Practice</div><h2>Clean Up and Complete a Document</h2><div class="lesson-status"><span class="done-stamp">✓ Completed</span></div></div></div><div class="practice-download"><div><strong>Practice starter:</strong><br><span class="small">Download the fictional document and work through the Client Request.</span></div><a class="btn" download href="PVA_Document_Basics_Practice_Starter.docx">Download practice file</a></div><h3>Bring the Skills Together</h3>
+<p>We’ve worked through the basic skills needed to understand, navigate, edit, format, and organize a document.</p>
+<p>Now use those skills together.</p>
+<p>You will start with a downloadable starter document.</p>
+<h3>Canonical Practice Workflow</h3>
+<p><strong>Open → Save a Copy → Inspect → Edit → Organize → Format → Review → Save</strong></p>
+<p>Saving a copy near the beginning protects the original while you work.</p>
+<h3>Your Task</h3>
+<ol>
+<li>Open the starter document.</li>
+<li>Save a separate working copy before making changes.</li>
+<li>Inspect the document before editing.</li>
+<li>Navigate through the document and confirm where you are.</li>
+<li>Use Find/Search to locate a requested item.</li>
+<li>Make the requested edits.</li>
+<li>Copy one item to a second location.</li>
+<li>Move one item using cut and paste.</li>
+<li>Delete <strong>and</strong> replace the requested information.</li>
+<li>Organize information into appropriate lists and a simple table.</li>
+<li>Apply basic formatting and built-in headings.</li>
+<li>Check the included link and its destination.</li>
+<li>Review the finished document.</li>
+<li>Save the finished copy and confirm where it is saved.</li>
+</ol>
+<p>The starter file is fictional, neutral, beginner-friendly, and free of real personal information. It contains a mixture of title/section information, notes, tasks, status information, a repeated name or term, a web link, simple edits, and information suitable for a table.</p>
+<h3>Client Request Box</h3>
+<p>The practice file contains a clearly marked <strong>Client Request</strong> section with 9 concrete changes. The request list, rather than guesswork, determines what information should change.</p>
+<h4>Client Request — Complete These Changes</h4>
+<ol>
+<li>Change the primary contact from <strong>Rina Santos</strong> to <strong>Rina Dela Cruz</strong>. Leave the follow-up contact unchanged.</li>
+<li>Copy the sentence <strong>“The reference folder contains the latest notes.”</strong> and place the copy under <strong>THURSDAY FOLLOW-UP</strong>.</li>
+<li>Move <strong>“Prepare the weekly summary.”</strong> from the Monday numbered list to a new line directly below <strong>“The reference folder contains the latest notes.”</strong> in <strong>TUESDAY TASKS</strong>. Use cut and paste rather than retyping it.</li>
+<li>Replace <strong>“The first draft should be prepared before the afternoon check.”</strong> with <strong>“The first draft should be prepared before the morning check.”</strong></li>
+<li>Delete the sentence <strong>“Keep the original notes available while preparing the completed version.”</strong> from <strong>FINAL REMINDER</strong>.</li>
+<li>Split the <strong>five Wednesday actions</strong> into separate lines, then turn them into a numbered list because they are intended as a sequence.</li>
+<li>Convert <strong>CURRENT STATUS</strong> into a simple two-column table with a label/header row: <strong>Item | Status</strong>.</li>
+<li>Apply a built-in heading to every <strong>ALL-CAPS section heading in the work document</strong> (not the Client Request label). Apply the editor’s <strong>Title</strong> style to the document title.</li>
+<li>Check the PVA Academy link and confirm that it reaches the intended website.</li>
+</ol>
+<p>The Client Request is instruction-only; it is not part of the work document. Keep it available while working, then <strong>delete the entire Client Request section before your final save</strong>.</p>
+<h3>Step 1 — Open</h3>
+<p>Download the starter document.</p>
+<p>Open it in Microsoft Word, Google Docs, LibreOffice Writer, or another compatible editor.</p>
+<p>Some editors first open downloaded files in a read-only, preview, or protected view. Look for an option such as <strong>Enable Editing</strong> or <strong>Open with…</strong> before you start.</p>
+<p>For a web editor, you may need to upload or import the downloaded file first.</p>
+<h4>If the Starter File Will Not Download</h4>
+<p>You can still complete the practice.</p>
+<p>If the downloadable starter file is unavailable, copy the unformatted starter text below into a blank document and use the <strong>Client Request</strong> above. For request 9, the fallback text does not contain a working link. Open <strong><a href="https://probinsiyanongva.org/" target="_blank" rel="noopener">https://probinsiyanongva.org/</a></strong> in your browser and confirm that it shows PVA Academy. Do not create a new hyperlink in the fallback document.</p>
+<p><strong>Fallback starter text</strong></p>
+<div class="backup-wrap"><pre id="backupText"><code class="language-text">WEEKLY WORK COORDINATION NOTES
+Week of: September 28, 2026
+Prepared for: Internal Work Team
+These notes collect routine coordination items, follow-ups, and status information for the week.
+MONDAY TASKS
+Review the incoming messages and identify items that need a response. Check the shared reference notes before updating the weekly summary.
+1. Check incoming messages
+2. Review reference notes
+3. Prepare the weekly summary.
+FOLLOW-UP NOTES
+Rina will review the summary after the first draft is ready.
+The first draft should be prepared before the afternoon check.
+Please send the final copy to Rina after the review.
+TUESDAY TASKS
+Prepare the next coordination update and check whether any open items still need attention.
+The reference folder contains the latest notes.
+Wednesday: Review open items, confirm the latest notes, prepare the summary, send the completed copy, check the reference link.
+CURRENT STATUS
+Message review — Complete
+Reference notes — Pending
+Weekly summary — In progress
+CONTACT NOTES
+Primary contact: Rina Santos
+Follow-up contact: Rina Santos
+Use the reference page for the latest coordination information.
+REFERENCE LINK
+Open the PVA Academy website: PVA Academy
+THURSDAY FOLLOW-UP
+Thursday follow-up includes several items that should be checked before the weekly coordination update is finalized.
+OPEN ITEMS
+Check whether the reference notes have been updated.
+Confirm which messages still require a response.
+Prepare the final coordination update.
+FINAL REMINDER
+Keep the original notes available while preparing the completed version. The finished document should be clear enough for another team member to review quickly.
+</code></pre><button class="btn secondary copy-btn" type="button" onclick="copyBackupText()">Copy text</button></div>
+<p>The fallback text intentionally does not preserve the original formatting. That is part of the practice: use the Client Request to organize and format the document. The fallback text also does not contain a working hyperlink; use the browser check above for request 9.</p>
+<h3>Step 2 — Save a Copy</h3>
+<p>Before editing, create a separate working copy.</p>
+<p>Depending on the editor, this may be called:</p>
+<ul>
+<li>Save As</li>
+<li>Save a Copy</li>
+<li>Make a Copy</li>
+<li>A similar copy/version command</li>
+</ul>
+<p>Choose a clear filename and confirm where the working copy is saved.</p>
+<p>After making the copy, check the file name shown in the window or tab so you know you are editing the copy. Keep the original unchanged.</p>
+<h3>Step 3 — Inspect Before Editing</h3>
+<p>Read through the document before changing anything.</p>
+<p>Identify:</p>
+<ul>
+<li>Main topic</li>
+<li>Sections</li>
+<li>Headings</li>
+<li>Related information</li>
+<li>Repeated terms</li>
+<li>Corrections</li>
+<li>List opportunities</li>
+<li>Table opportunities</li>
+<li>Link</li>
+<li>Inconsistent formatting</li>
+</ul>
+<h3>Step 4 — Navigate and Find</h3>
+<p>Scroll through the document.</p>
+<p>Use Find/Search to locate the requested repeated term.</p>
+<p>If there are several matches, read the surrounding content and confirm the correct occurrence before editing it.</p>
+<h3>Step 5 — Edit</h3>
+<p>Follow the Client Request box.</p>
+<p>Use:</p>
+<p><strong>Locate → Select or Position the Cursor → Edit → Check</strong></p>
+<p>After each important change, read the result. When moving a whole line, remove any empty line or leftover number left behind by the move.</p>
+<h3>Step 6 — Organize</h3>
+<p>Turn information into:</p>
+<ul>
+<li>A bulleted list where order does not matter <strong>(optional in this practice)</strong></li>
+<li>A numbered list where sequence matters</li>
+<li>A simple table where information has related fields</li>
+</ul>
+<p>Use a label/header row for the table.</p>
+<h3>Step 7 — Format</h3>
+<p>Apply:</p>
+<ul>
+<li>A clear title</li>
+<li>Built-in headings for section headings</li>
+<li>Readable body text</li>
+<li>Consistent font/size choices</li>
+<li>Reasonable spacing</li>
+<li>Limited emphasis</li>
+<li>Appropriate alignment</li>
+</ul>
+<p>Formatting should support the information.</p>
+<h3>Step 8 — Check the Link</h3>
+<p>Confirm:</p>
+<ul>
+<li>The link is present.</li>
+<li>The visible link text makes sense.</li>
+<li>The link address is available for checking.</li>
+<li>The link reaches the intended destination.</li>
+</ul>
+<p>Use the editor's normal link behavior. Advanced link management is not required.</p>
+<h3>Step 9 — Review the Finished Document</h3>
+<p>Use this observable checklist:</p>
+<ul>
+<li>Every requested change is complete.</li>
+<li>The original starter document remains unchanged <strong>(if you used the downloadable starter file)</strong>.</li>
+<li>The working copy has a new, clear name.</li>
+<li>The title is visually distinct from body text.</li>
+<li>Section headings use the editor's heading feature.</li>
+<li>The five Wednesday actions are in a numbered list.</li>
+<li>Status information is organized in a table with a label/header row.</li>
+<li>The link opens the expected destination.</li>
+<li>Formatting is consistent enough to support easy reading.</li>
+<li>The Client Request section has been removed before the final save <strong>(if you used the downloadable starter file)</strong>.</li>
+<li>No accidental deletions or unintended text remain in the work content.</li>
+</ul>
+<h3>Step 10 — Save and Confirm</h3>
+<p>Save the finished working copy.</p>
+<p>If the editor saves automatically, confirm that the latest version is saved.</p>
+<p>Confirm where the finished copy is located and that the original remains unchanged.</p>
+<h3>Practice Standard</h3>
+<p>This activity is not graded.</p>
+<p>There is no required score and no single aesthetic answer.</p>
+<p>Focus on:</p>
+<p><strong>Accurate → Organized → Readable → Complete</strong></p>
+<p>Final review habit:</p>
+<p><strong>Stop → Review → Confirm → Save</strong></p>
+<h3>Practice Reflection</h3>
+<p>Look at the finished file itself:</p>
+<ul>
+<li>Does my document contain every requested change?</li>
+<li>Are the sections easy to identify?</li>
+<li>Are lists used where they help?</li>
+<li>Is the table easy to read?</li>
+<li>Does the link work as intended?</li>
+<li>Is the formatting consistent?</li>
+<li>Did I preserve the original?</li>
+<li>Can I identify the finished copy?</li>
+</ul>
+<p>This reflection is about the <strong>file you produced</strong>.</p>
+<p>Next: <strong>Module Self-Check and Completion</strong></p>
+<hr />
+<div class="lesson-footer"><span class="next-hint">Next: Self-Check</span><div class="footer-actions"><button class="btn" onclick="markLesson(5)">Mark Practice complete</button><button class="btn subtle not-done-btn" onclick="unmarkLesson(5)" disabled>Mark as not done</button></div></div></section>
+<section class="card" id="selfcheck"><div class="section-label">Final reflection</div><div class="folder-tab">Self-check</div><h3>You’ve Reached the Final Step</h3><p>You’ve worked through the Document Basics lessons and the hands-on practice.</p><p>This self-check is for reflection, not grading. There is no score, ranking, or passing mark.</p><h3>Module Self-Check</h3><p>For each statement, choose the response that best describes you. Your choices are saved on this device.</p>
+<div class="selfcheck-item"><h4>1. Recognize Basic Document Parts</h4><p>I can recognize document vs. page, text, paragraphs, headings, the insertion point, selected text, and basic document sections.</p><fieldset class="choice-group"><legend class="small">Choose one:</legend><label class="choice"><input type="radio" name="sc1" value="comfortable" onchange="setSelfCheck(1,this.value)"> I can do this comfortably</label><label class="choice"><input type="radio" name="sc1" value="practice" onchange="setSelfCheck(1,this.value)"> I can do this with some practice</label><label class="choice"><input type="radio" name="sc1" value="need" onchange="setSelfCheck(1,this.value)"> I need more practice</label></fieldset><div class="review-pointer" id="review1">Review <a href="#lesson1">Lesson 1 — Understanding Documents</a>.</div></div>
+<div class="selfcheck-item"><h4>2. Navigate</h4><p>I can scroll, recognize where I am, move to a section, use Find/Search, confirm the correct occurrence, use zoom, and recognize content outside the visible area.</p><fieldset class="choice-group"><legend class="small">Choose one:</legend><label class="choice"><input type="radio" name="sc2" value="comfortable" onchange="setSelfCheck(2,this.value)"> I can do this comfortably</label><label class="choice"><input type="radio" name="sc2" value="practice" onchange="setSelfCheck(2,this.value)"> I can do this with some practice</label><label class="choice"><input type="radio" name="sc2" value="need" onchange="setSelfCheck(2,this.value)"> I need more practice</label></fieldset><div class="review-pointer" id="review2">Review <a href="#lesson2">Lesson 2 — Navigating a Document</a>.</div></div>
+<div class="selfcheck-item"><h4>3. Edit</h4><p>I can enter text, position the insertion point, select, delete, replace, copy and paste, cut and paste, undo, redo, and check the result.</p><fieldset class="choice-group"><legend class="small">Choose one:</legend><label class="choice"><input type="radio" name="sc3" value="comfortable" onchange="setSelfCheck(3,this.value)"> I can do this comfortably</label><label class="choice"><input type="radio" name="sc3" value="practice" onchange="setSelfCheck(3,this.value)"> I can do this with some practice</label><label class="choice"><input type="radio" name="sc3" value="need" onchange="setSelfCheck(3,this.value)"> I need more practice</label></fieldset><div class="review-pointer" id="review3">Review <a href="#lesson3">Lesson 3 — Entering and Editing Text</a>.</div></div>
+<div class="selfcheck-item"><h4>4. Format</h4><p>I can work with font, font size, bold, italic, underline, alignment, line spacing, paragraph spacing, and built-in headings. I understand that formatting should support readability and structure.</p><fieldset class="choice-group"><legend class="small">Choose one:</legend><label class="choice"><input type="radio" name="sc4" value="comfortable" onchange="setSelfCheck(4,this.value)"> I can do this comfortably</label><label class="choice"><input type="radio" name="sc4" value="practice" onchange="setSelfCheck(4,this.value)"> I can do this with some practice</label><label class="choice"><input type="radio" name="sc4" value="need" onchange="setSelfCheck(4,this.value)"> I need more practice</label></fieldset><div class="review-pointer" id="review4">Review <a href="#lesson4">Lesson 4 — Basic Formatting</a>.</div></div>
+<div class="selfcheck-item"><h4>5. Organize Structured Information</h4><p>I can choose between bullets and numbers, recognize rows/columns/cells, create a simple table, work with a basic link, recognize comments and suggested changes, and choose a structure that helps the reader.</p><fieldset class="choice-group"><legend class="small">Choose one:</legend><label class="choice"><input type="radio" name="sc5" value="comfortable" onchange="setSelfCheck(5,this.value)"> I can do this comfortably</label><label class="choice"><input type="radio" name="sc5" value="practice" onchange="setSelfCheck(5,this.value)"> I can do this with some practice</label><label class="choice"><input type="radio" name="sc5" value="need" onchange="setSelfCheck(5,this.value)"> I need more practice</label></fieldset><div class="review-pointer" id="review5">Review <a href="#lesson5">Lesson 5 — Working With Structured Content</a>.</div></div>
+<div class="selfcheck-item"><h4>6. Save and Review</h4><p>I can save changes in an editor that uses manual saving, recognize automatic saving in a web editor, create a separate copy, confirm where the finished copy is saved, and review the finished document.</p><fieldset class="choice-group"><legend class="small">Choose one:</legend><label class="choice"><input type="radio" name="sc6" value="comfortable" onchange="setSelfCheck(6,this.value)"> I can do this comfortably</label><label class="choice"><input type="radio" name="sc6" value="practice" onchange="setSelfCheck(6,this.value)"> I can do this with some practice</label><label class="choice"><input type="radio" name="sc6" value="need" onchange="setSelfCheck(6,this.value)"> I need more practice</label></fieldset><div class="review-pointer" id="review6">Review <a href="#lesson1">Lesson 1</a>, <a href="#lesson3">Lesson 3</a>, and the <a href="#practice">Practice Task</a>.</div></div>
+<h3>One More Question</h3><p>If a client sent you a basic document and asked you to make simple changes, could you work through this process?</p><p><strong>Open → Save a Copy → Inspect → Edit → Organize → Format → Review → Save</strong></p><fieldset class="choice-group"><legend class="small">Choose one:</legend><label class="choice"><input type="radio" name="sc7" value="comfortable" onchange="setSelfCheck(7,this.value)"> Yes, I feel comfortable starting.</label><label class="choice"><input type="radio" name="sc7" value="practice" onchange="setSelfCheck(7,this.value)"> I can start, but I still need more practice.</label><label class="choice"><input type="radio" name="sc7" value="need" onchange="setSelfCheck(7,this.value)"> I need to review some lessons first.</label></fieldset>
+<h3>Your Foundation Skill</h3><p>You have built a basic foundation for working with documents.</p><p><strong>Understand → Navigate → Edit → Format → Structure → Apply</strong></p><h3>Where This Fits in VA Work</h3><p>Document Basics helps you handle the document itself.</p><p>Specialized training teaches what the document is for and what work needs to be done with its information.</p><h3>What This Module Does Not Mean</h3><p>Completion does not mean:</p><ul><li>Microsoft Word certification</li><li>Google Docs certification</li><li>Professional certification</li><li>Demonstrated proficiency in every document-related VA task</li><li>Replacement for specialized training or work experience</li></ul><p>It acknowledges completion of this foundation learning experience.</p><h3>Completion</h3><div class="hero-actions"><button class="btn" onclick="completeModule()">Finish the module</button></div></section>
+<section class="completion hidden" id="completion"><div class="completion-icon">✓</div><h2>Foundation Module Completed</h2><p><strong>PVA Academy — Document Basics</strong></p><p>A practical foundation for working with documents in VA tasks.</p><div class="completion-card-note"><strong>This is a completion acknowledgment, not a certification or competency credential.</strong><br><br><span id="completionMessage">You've reached the completion screen.</span></div><p class="small">The two foundation modules are independent. You may continue to Spreadsheet Basics, a specialized VA module, additional practice, or actual document-based tasks.</p><button class="btn gold" onclick="window.print()">Print / Save this completion screen</button></section><footer><span class="footer-mark">PVA Academy</span> · Practical. Valuable. Authentic.</footer></main><script>
+const STORAGE_KEY='pva-document-basics-progress-v2';
+const totalSections=6;
+const segments=[{id:'top',label:'Start'},{id:'lesson1',label:'1'},{id:'lesson2',label:'2'},{id:'lesson3',label:'3'},{id:'lesson4',label:'4'},{id:'lesson5',label:'5'},{id:'practice',label:'Practice'},{id:'selfcheck',label:'Self-Check'}];
+const defaultState={done:[],completed:false,selfCheck:{}};
+let storageOK=true;
+const freshState=()=>({done:[],completed:false,selfCheck:{}});
+let state=freshState();
+function normalizeState(raw){
+  const out={done:[],completed:false,selfCheck:{}};
+  if(raw&&Array.isArray(raw.done)) out.done=[...new Set(raw.done.map(Number).filter(n=>Number.isInteger(n)&&n>=0&&n<totalSections))].sort((a,b)=>a-b);
+  if(raw&&typeof raw.completed==='boolean') out.completed=raw.completed;
+  if(raw&&raw.selfCheck&&typeof raw.selfCheck==='object'){
+    for(let i=1;i<=7;i++){if(['comfortable','practice','need'].includes(raw.selfCheck[i])) out.selfCheck[i]=raw.selfCheck[i];}
+  }
+  return out;
+}
+function showStorageBanner(message){
+  const b=document.getElementById('storageBanner');
+  if(!b)return;
+  document.getElementById('storageBannerText').textContent=message;
+  b.classList.remove('hidden');
+}
+function hideStorageBanner(){document.getElementById('storageBanner')?.classList.add('hidden');}
+function loadState(){
+  try{
+    const probe='__pva_doc_probe__'; localStorage.setItem(probe,'1'); localStorage.removeItem(probe);
+    const raw=localStorage.getItem(STORAGE_KEY);
+    if(raw){
+      try{state=normalizeState(JSON.parse(raw));}
+      catch(e){state=freshState();showStorageBanner('Your saved progress could not be read, so this session started with a fresh progress state. You can continue, but check your browser storage settings if this keeps happening.');}
+    }
+  }catch(e){storageOK=false;state=freshState();showStorageBanner('Your browser is not allowing this course to save progress. You can continue learning, but your progress may not remain after you close or refresh this page.');}
+}
+function save(){
+  if(!storageOK){renderAll();return false;}
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));document.getElementById('saveState').textContent='Progress saved on this device.';hideStorageBanner();renderAll();return true;}
+  catch(e){storageOK=false;showStorageBanner('Your browser stopped this course from saving progress. You can continue learning, but your progress may not remain after you close or refresh this page.');renderAll();return false;}
+}
+function goTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+function startOrContinue(){
+  const firstIncomplete=Array.from({length:totalSections},(_,i)=>i).find(i=>!state.done.includes(i));
+  const target=firstIncomplete===undefined?'selfcheck':['lesson1','lesson2','lesson3','lesson4','lesson5','practice'][firstIncomplete];
+  goTo(target||'lesson1');
+}
+function markLesson(i){if(!state.done.includes(i))state.done.push(i);state.done.sort((a,b)=>a-b);save();const next=['lesson2','lesson3','lesson4','lesson5','practice','selfcheck'][i]||'selfcheck';goTo(next);}
+function unmarkLesson(i){state.done=state.done.filter(x=>x!==i);if(state.done.length<totalSections)state.completed=false;save();goTo(['lesson1','lesson2','lesson3','lesson4','lesson5','practice'][i]);}
+function setSelfCheck(i,value){state.selfCheck[i]=value;save();const p=document.getElementById('review'+i);if(p)p.classList.toggle('show',value==='need');}
+function completeModule(){
+  state.completed=true;save();
+  const done=state.done.length;
+  document.getElementById('completionMessage').textContent=done===totalSections?"You've worked through the lessons and hands-on practice covering the core document-handling skills in this module.":`You've chosen to finish the module. ${done} of ${totalSections} learning sections are marked complete; you can return to any unmarked section for more practice.`;
+  document.getElementById('completion').classList.remove('hidden');
+  renderAll();goTo('completion');
+}
+function renderProgress(){
+  const track=document.getElementById('progressTrack');track.innerHTML='';
+  segments.forEach((seg,i)=>{const b=document.createElement('button');b.className='progress-seg';b.type='button';b.title=seg.label;b.setAttribute('aria-label','Go to '+seg.label);b.setAttribute('aria-hidden','true');b.tabIndex=-1;track.appendChild(b);});
+  const done=state.done.length;
+  document.getElementById('progressPct').textContent=Math.round(done/totalSections*100)+'%';
+  document.getElementById('progressText').textContent=state.completed?'Completed':done===0?'Getting started':`Lesson progress: ${done} of ${totalSections}`;
+  const lessonIds=['lesson1','lesson2','lesson3','lesson4','lesson5','practice'];
+  const firstIncomplete=lessonIds.findIndex((id)=>!state.done.includes(lessonIds.indexOf(id)));
+  const currentId=firstIncomplete===-1?'selfcheck':lessonIds[firstIncomplete];
+  document.querySelectorAll('.progress-seg').forEach((el,idx)=>{const sectionIndex=idx-1;const isDone=sectionIndex>=0&&state.done.includes(sectionIndex);el.classList.toggle('done',isDone);el.classList.toggle('current',segments[idx]?.id===currentId || (done===0&&idx===0));});
+  const nav=document.getElementById('lessonNav');nav.innerHTML='';
+  segments.forEach((seg,i)=>{const b=document.createElement('button');b.type='button';b.textContent=seg.label;b.onclick=()=>goTo(seg.id);const sectionIndex=i-1;if(sectionIndex>=0&&state.done.includes(sectionIndex))b.classList.add('done');if(seg.id===currentId)b.classList.add('current');nav.appendChild(b);});
+  document.querySelectorAll('.lesson').forEach((el,idx)=>{el.classList.toggle('is-done',idx<totalSections&&state.done.includes(idx));});
+  document.querySelectorAll('.not-done-btn').forEach((b,idx)=>{const i=Math.floor(idx);});
+  document.querySelectorAll('.lesson-footer').forEach((footer,idx)=>{const mark=footer.querySelector('.not-done-btn');if(mark){const n=parseInt(mark.getAttribute('onclick').match(/\d+/)[0],10);mark.disabled=!state.done.includes(n);}});
+  const start=document.getElementById('startContinueBtn');if(start)start.textContent=done===0?'Start the module':done<totalSections?'Continue where you left off':'Review the module';
+  if(state.completed)document.getElementById('completion').classList.remove('hidden');
+}
+function renderSelfCheck(){for(let i=1;i<=7;i++){const v=state.selfCheck[i];document.querySelectorAll(`input[name="sc${i}"]`).forEach(r=>r.checked=r.value===v);const p=document.getElementById('review'+i);if(p)p.classList.toggle('show',v==='need');}}
+function renderAll(){renderProgress();renderSelfCheck();const msg=document.getElementById('completionMessage');if(msg&&state.completed){const done=state.done.length;msg.textContent=done===totalSections?"You've worked through the lessons and hands-on practice covering the core document-handling skills in this module.":`You've chosen to finish the module. ${done} of ${totalSections} learning sections are marked complete; you can return to any unmarked section for more practice.`;}if(!state.completed)document.getElementById('completion')?.classList.add('hidden');}
+function exportProgress(){
+  const payload={format:'pva-document-basics-progress-backup',version:2,course:'PVA Academy — Document Basics Foundation Module',storageKey:STORAGE_KEY,exportedAt:new Date().toISOString(),note:'Progress backup for this browser only. Restore it on the Document Basics page to bring your progress back.',summary:{lessonsComplete:state.done.length,lessonsTotal:totalSections,savedItems:Object.keys(state.selfCheck).length,moduleCompleted:state.completed},state};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='PVA-Document-Basics-progress-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+function restoreProgress(event){
+  const file=event.target.files?.[0];event.target.value='';if(!file)return;
+  const reader=new FileReader();reader.onload=()=>{try{const payload=JSON.parse(reader.result);if(payload.format!=='pva-document-basics-progress-backup'||payload.course!=='PVA Academy — Document Basics Foundation Module'||payload.version!==2)throw new Error('wrong');const restored=normalizeState(payload.state);const summary=`Backup exported: ${payload.exportedAt?new Date(payload.exportedAt).toLocaleString():'unknown'}\nLearning sections marked complete: ${restored.done.length} of ${totalSections}\nSelf-check responses saved: ${Object.keys(restored.selfCheck).length} of 7\nModule completion marked: ${restored.completed?'Yes':'No'}\n\nRestore this backup? Current progress will be replaced.`;if(!confirm(summary))return;state=restored;storageOK=true;if(!save())throw new Error('storage');alert('Progress restored.');}catch(e){alert('That file is not a valid Document Basics progress backup. Only version 2 backups from this module can be restored.');}};reader.readAsText(file);
+}
+function clearProgress(){if(!confirm('Clear all saved Document Basics progress on this device? This cannot be undone.'))return;state=freshState();try{localStorage.removeItem(STORAGE_KEY);storageOK=true;hideStorageBanner();document.getElementById('saveState').textContent='Progress cleared.';}catch(e){storageOK=false;showStorageBanner('Your browser is not allowing this course to clear saved data. You can continue, but browser storage is unavailable.');}renderAll();goTo('top');}
+async function copyBackupText(){const el=document.getElementById('backupText');const text=el?.innerText||'';try{await navigator.clipboard.writeText(text);alert('Starter text copied.');}catch(e){alert('Copy is not available in this browser. Select the text manually instead.');}}
+loadState();renderAll();
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const idx=segments.findIndex(s=>s.id===e.target.id);document.querySelectorAll('.progress-seg').forEach(x=>x.classList.remove('current'));document.querySelectorAll('.progress-seg')[idx]?.classList.add('current');}}),{rootMargin:'-25% 0px -65% 0px',threshold:0});segments.forEach(seg=>{const el=document.getElementById(seg.id);if(el)io.observe(el);});
+</script></body></html>
